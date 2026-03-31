@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+echo "---> Installing dependencies..."
+pip install --no-cache-dir -r /tmp/src/requirements.txt
+
+echo "---> Copying application source..."
+cp -rf /tmp/src/. /opt/app-root/src/
+
+echo "---> Build complete."
